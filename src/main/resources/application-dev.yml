@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://pushpakjangela:OxK6bPfCDYrdI1TT@pushpak.hpo8o.mongodb.net/journal
+      name: Journal App
+      database: journal
+
+connectTimeoutMS: 30000&retryWrites=true&w=majority
+server:
+  port: 8080
+#  servlet:
+#    context-path: /journal
