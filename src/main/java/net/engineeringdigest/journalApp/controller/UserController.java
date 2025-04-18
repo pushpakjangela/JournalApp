@@ -1,8 +1,10 @@
 package net.engineeringdigest.journalApp.controller;
 
+import WheatherResponse.WeatherResponse;
 import net.engineeringdigest.journalApp.entity.User;
 import net.engineeringdigest.journalApp.repository.UserRepository;
 import net.engineeringdigest.journalApp.service.UserService;
+import net.engineeringdigest.journalApp.service.WeatherService;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,6 +13,7 @@ import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -23,6 +26,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private WeatherService weatherService;
 
     @GetMapping("/allUsers")
     public ResponseEntity<?> getAllUser() {
@@ -76,6 +82,25 @@ public class UserController {
             return new ResponseEntity<>(currentUser , HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
+    @PostMapping("/createUser")
+    public ResponseEntity<?> createNewUser(@RequestBody User user){
+        userService.saveNewAdminUser(user);
+        return new ResponseEntity<>(user,HttpStatus.OK);
+
+    }
+
+    @GetMapping("/weather")
+    public ResponseEntity<?> Wheather(){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String userName = authentication.getName();
+        WeatherResponse weatherResp = weatherService.getWeather("DELHI");
+        String greeting = ",weather is feels like"+weatherResp.getCurrent().getFeelslike();
+        if(weatherResp!=null){
+            greeting = ",weather is feels like"+weatherResp.getCurrent().getFeelslike();
+        }
+        return new ResponseEntity<>("hi"+greeting,HttpStatus.OK);
     }
 
 }

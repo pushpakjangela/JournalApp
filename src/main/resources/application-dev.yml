@@ -1,12 +1,51 @@
 spring:
   data:
+    redis:
+      host: redis-11044.c212.ap-south-1-1.ec2.redns.redis-cloud.com
+      port: 11044
+      password: Z0xgyn8b8rb389z2AkyhTYk79pbb4Tcs
+
     mongodb:
       uri: mongodb+srv://pushpakjangela:OxK6bPfCDYrdI1TT@pushpak.hpo8o.mongodb.net/journal
       name: Journal App
       database: journal
 
+  kafka:
+    bootstrap-servers: pkc-9q8rv.ap-south-2.aws.confluent.cloud:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      group-id: weekly-sentiment-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: net.engineeringdigest.journalApp.model
+    properties:
+      security:
+        protocol: SASL_SSL
+      sasl:
+        mechanism: PLAIN
+        jaas:
+          config: org.apache.kafka.common.security.plain.PlainLoginModule required username='CY5HIKT2MET25CYG' password='kAz0E9qi9nmTM9+nc5/CneepOcxACVns/pIGAe5v2Ww3Uy3Rux21XVrYRyc8AGOc';
+      session:
+        timeout:
+          ms: 45000
+
 connectTimeoutMS: 30000&retryWrites=true&w=majority
 server:
   port: 8080
+
+
+weather:
+  api:
+    key: 7e5de6a876e1ef3c99569999dcc53814
+
+weatherApi:
+  api:https: //api.weatherstack.com/current?access_key=API_KEY&query=CITY
+
 #  servlet:
 #    context-path: /journal
