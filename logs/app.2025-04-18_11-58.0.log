@@ -1,0 +1,32 @@
+2025-04-18 11:58:00 - [Producer clientId=JournalApp-producer-1] Error while fetching metadata with correlation id 26 : {sentiments=UNKNOWN_TOPIC_OR_PARTITION}
+2025-04-18 11:58:01 - [Producer clientId=JournalApp-producer-1] Error while fetching metadata with correlation id 27 : {sentiments=UNKNOWN_TOPIC_OR_PARTITION}
+2025-04-18 11:58:02 - [Producer clientId=JournalApp-producer-1] Error while fetching metadata with correlation id 28 : {sentiments=UNKNOWN_TOPIC_OR_PARTITION}
+2025-04-18 11:58:03 - [Producer clientId=JournalApp-producer-1] Error while fetching metadata with correlation id 29 : {sentiments=UNKNOWN_TOPIC_OR_PARTITION}
+2025-04-18 11:58:04 - [Producer clientId=JournalApp-producer-1] Error while fetching metadata with correlation id 30 : {sentiments=UNKNOWN_TOPIC_OR_PARTITION}
+2025-04-18 11:58:05 - [Producer clientId=JournalApp-producer-1] Error while fetching metadata with correlation id 31 : {sentiments=UNKNOWN_TOPIC_OR_PARTITION}
+2025-04-18 11:58:06 - [Producer clientId=JournalApp-producer-1] Error while fetching metadata with correlation id 32 : {sentiments=UNKNOWN_TOPIC_OR_PARTITION}
+2025-04-18 11:58:07 - [Producer clientId=JournalApp-producer-1] Error while fetching metadata with correlation id 33 : {sentiments=UNKNOWN_TOPIC_OR_PARTITION}
+2025-04-18 11:58:08 - [Producer clientId=JournalApp-producer-1] Error while fetching metadata with correlation id 34 : {sentiments=UNKNOWN_TOPIC_OR_PARTITION}
+2025-04-18 11:58:09 - [Producer clientId=JournalApp-producer-1] Error while fetching metadata with correlation id 35 : {sentiments=UNKNOWN_TOPIC_OR_PARTITION}
+2025-04-18 11:58:10 - [Producer clientId=JournalApp-producer-1] Error while fetching metadata with correlation id 36 : {sentiments=UNKNOWN_TOPIC_OR_PARTITION}
+2025-04-18 11:58:11 - [Producer clientId=JournalApp-producer-1] Error while fetching metadata with correlation id 37 : {sentiments=UNKNOWN_TOPIC_OR_PARTITION}
+2025-04-18 11:58:11 - [Consumer clientId=consumer-weekly_sentiments_group-1, groupId=weekly_sentiments_group] Revoke previously assigned partitions weekly_sentiments-0, weekly_sentiments-1, weekly_sentiments-2, weekly_sentiments-3, weekly_sentiments-4, weekly_sentiments-5
+2025-04-18 11:58:11 - weekly_sentiments_group: partitions revoked: [weekly_sentiments-0, weekly_sentiments-1, weekly_sentiments-2, weekly_sentiments-3, weekly_sentiments-4, weekly_sentiments-5]
+2025-04-18 11:58:11 - [Consumer clientId=consumer-weekly_sentiments_group-1, groupId=weekly_sentiments_group] Member consumer-weekly_sentiments_group-1-ebfe7d15-be65-433b-843f-023f26652c5b sending LeaveGroup request to coordinator b6-pkc-9q8rv.ap-south-2.aws.confluent.cloud:9092 (id: 2147483641 rack: null) due to the consumer unsubscribed from all topics
+2025-04-18 11:58:11 - [Consumer clientId=consumer-weekly_sentiments_group-1, groupId=weekly_sentiments_group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-04-18 11:58:11 - [Consumer clientId=consumer-weekly_sentiments_group-1, groupId=weekly_sentiments_group] Request joining group due to: consumer pro-actively leaving the group
+2025-04-18 11:58:11 - [Consumer clientId=consumer-weekly_sentiments_group-1, groupId=weekly_sentiments_group] Unsubscribed all topics or patterns and assigned partitions
+2025-04-18 11:58:11 - [Consumer clientId=consumer-weekly_sentiments_group-1, groupId=weekly_sentiments_group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-04-18 11:58:11 - [Consumer clientId=consumer-weekly_sentiments_group-1, groupId=weekly_sentiments_group] Request joining group due to: consumer pro-actively leaving the group
+2025-04-18 11:58:12 - Metrics scheduler closed
+2025-04-18 11:58:12 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-04-18 11:58:12 - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-04-18 11:58:12 - Metrics reporters closed
+2025-04-18 11:58:12 - App info kafka.consumer for consumer-weekly_sentiments_group-1 unregistered
+2025-04-18 11:58:12 - weekly_sentiments_group: Consumer stopped
+2025-04-18 11:58:12 - [Producer clientId=JournalApp-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2025-04-18 11:58:12 - Metrics scheduler closed
+2025-04-18 11:58:12 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-04-18 11:58:12 - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-04-18 11:58:12 - Metrics reporters closed
+2025-04-18 11:58:12 - App info kafka.producer for JournalApp-producer-1 unregistered

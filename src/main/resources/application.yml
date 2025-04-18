@@ -1,9 +1,21 @@
 spring:
   profiles:
     active: dev
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: rv9109559291@gmail.com
+    password: emso cico ktfj kpst
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
 
 logging:
   level:
     net:
       engineeringdigest:
         journalApp: DEBUG
+
+#key: CY5HIKT2MET25CYG
+#Secret: kAz0E9qi9nmTM9+nc5/CneepOcxACVns/pIGAe5v2Ww3Uy3Rux21XVrYRyc8AGOc
